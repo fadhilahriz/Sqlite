@@ -23,16 +23,12 @@ public class LihatData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_data);
-
         tid = (TextView) findViewById(R.id.tvId);
         tnama = (TextView) findViewById(R.id.tvNama);
         tnotel = (TextView) findViewById(R.id.tvNomorTelepon);
-
         id = getIntent().getStringExtra("id");
         nm = getIntent().getStringExtra("nama");
         tlp = getIntent().getStringExtra("telpon");
-
-        setTitle("Lihat Data");
         tnama.setText(nm);
         tnotel.setText(tlp);
 

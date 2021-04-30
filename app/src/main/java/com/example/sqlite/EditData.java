@@ -23,18 +23,14 @@ public class EditData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_data);
-
         tNama = (TextInputEditText) findViewById(R.id.ednama);
         tTelpon = (TextInputEditText) findViewById(R.id.edtelpon);
         btnSave = (Button) findViewById(R.id.edbtn);
-
         id = getIntent().getStringExtra("id");
         nm = getIntent().getStringExtra("nm");
         tlp = getIntent().getStringExtra("tlp");
-
         tNama.setText(nm);
         tTelpon.setText(tlp);
-
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
