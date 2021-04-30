@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sqlite">
-        <activity android:name=".EditData" android:label="Edit Data" />
-        <activity android:name=".TemanBaru" android:label="Tambah Data" />
+        <activity android:name=".LihatData"></activity>
+        <activity
+            android:name=".EditData"
+            android:label="Edit Data" />
+        <activity
+            android:name=".TemanBaru"
+            android:label="Tambah Data" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
