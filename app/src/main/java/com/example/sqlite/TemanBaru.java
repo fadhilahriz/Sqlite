@@ -43,6 +43,7 @@ public class TemanBaru extends AppCompatActivity {
                     qvalues.put("telpon",tlp);
 
                     controller.insertData(qvalues);
+                    Toast.makeText(getApplicationContext(), "Data Berhasil di Tambahkan", Toast.LENGTH_LONG).show();
                     callHome();
                 }
             }

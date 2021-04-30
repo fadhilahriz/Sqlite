@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -69,6 +70,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                                 i.putExtra("nm",nm);
                                 i.putExtra("tlp",tlp);
                                 context.startActivity(i);
+                                Toast.makeText(context, "Data Berhasil di Update", Toast.LENGTH_LONG).show();
                                 break;
                             case R.id.mnhapus:
                                 HashMap<String,String> qvalues = new HashMap<>();
@@ -76,6 +78,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                                 controller.deleteData(qvalues);
                                 Intent in = new Intent(context, MainActivity.class);
                                 context.startActivity(in);
+                                Toast.makeText(context, "Data Berhasil di Hapus", Toast.LENGTH_LONG).show();
                                 break;
                         }
                         return true;

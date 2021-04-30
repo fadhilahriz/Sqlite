@@ -35,7 +35,7 @@ public class EditData extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (tNama.getText().toString().equals("") || (tTelpon.getText().toString().equals(""))) {
-                    Toast.makeText(getApplicationContext(), "Data belum lengkap!!", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Data belum lengkap!!", Toast.LENGTH_LONG).show();
                 } else {
                     nm = tNama.getText().toString();
                     tlp = tTelpon.getText().toString();
