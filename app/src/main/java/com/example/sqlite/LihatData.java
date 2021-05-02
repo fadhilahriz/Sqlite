@@ -16,7 +16,6 @@ public class LihatData extends AppCompatActivity {
     protected Cursor cursor;
     TextView tid,tnama,tnotel;
     Button back;
-    String id,nm,tlp;
     DBControl controller = new DBControl(this);
 
     @Override
@@ -26,23 +25,18 @@ public class LihatData extends AppCompatActivity {
         tid = (TextView) findViewById(R.id.tvId);
         tnama = (TextView) findViewById(R.id.tvNama);
         tnotel = (TextView) findViewById(R.id.tvNomorTelepon);
-        id = getIntent().getStringExtra("id");
-        nm = getIntent().getStringExtra("nama");
-        tlp = getIntent().getStringExtra("telpon");
-        tnama.setText(nm);
-        tnotel.setText(tlp);
 
         SQLiteDatabase db = controller.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM teman WHERE id = '" +
                 getIntent().getStringExtra("id") + "'",null);
         cursor.moveToFirst();
-        if (cursor.getCount()>0)
-        {
+        if (cursor.getCount()>0){
             cursor.moveToPosition(0);
             tid.setText(cursor.getString(0).toString());
             tnama.setText(cursor.getString(1).toString());
             tnotel.setText(cursor.getString(2).toString());
         }
+
         back = (Button) findViewById(R.id.btkembali);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
